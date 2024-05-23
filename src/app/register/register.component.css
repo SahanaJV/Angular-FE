@@ -1,0 +1,41 @@
+.container{
+    display:grid;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+
+    h1{
+        color: purple;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-transform: uppercase;
+    }
+    input{
+        background-color: white;
+        color:black;
+        padding: 20px 20px;
+        border: 0px;
+        margin-bottom: 10px;
+        width: 310px;
+        border: 2px solid purple;
+    }
+    button{
+        width: 340px;
+        text-align: center;
+        padding: 20px 0;
+        background-color: purple;
+        color: #fff;
+        border: 0px;
+        outline: none;
+        margin-top: 40px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+    }
+    .errors{
+        color: red;
+    }
+
+
+}

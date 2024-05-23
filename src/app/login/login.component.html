@@ -1,0 +1,42 @@
+
+<body>
+    <div id="container" >
+        <h1>Welcome</h1>
+        <h4>Login to your account</h4>
+        <div><hr></div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+        <div>
+            <label>Username</label><br>
+            <input type="text" formControlName="username" placeholder="Username" />
+        </div>
+
+        <div *ngIf="loginForm.controls ['username'].touched" >
+            <small *ngIf="loginForm.controls ['username'].errors" class="errors">Username should not be empty</small>
+        </div>
+
+
+        <div><label>Password</label><br>
+            <input type="password" formControlName="password"  placeholder="Password" />
+        </div>
+
+        <div *ngIf="loginForm.controls ['password'].touched" >
+            <small *ngIf="loginForm.controls ['password'].errors" class="errors">Password should not be empty</small>
+        </div>
+
+       
+            <button type="submit" >Login</button>
+       
+
+        </form>
+
+        <div><hr></div>
+        <h5><a routerLink="/forgotpassword">Forgot your password?</a></h5>
+        <h5>Don't have account?<a routerLink="/Register"> sign up here.</a></h5>
+        
+        <router-outlet></router-outlet>
+    </div>
+</body>
+
+

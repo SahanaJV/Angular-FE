@@ -1,0 +1,37 @@
+<body>
+<div class="container">
+    <h1>Register</h1> 
+    <form [formGroup]="register" (ngSubmit)="onSubmit()">
+      
+        <div>
+            <label>Username</label><br>
+            <input type="text" formControlName="username" placeholder="Username" required>
+        </div>
+
+        <div *ngIf="register.controls ['username'].touched" >
+            <small *ngIf="register.controls ['username'].errors" class="errors">Username should not be empty</small>
+        </div>
+
+        <div><label>Password</label><br>
+            <input type="password" formControlName="password"  placeholder="Password" required>
+        </div>
+
+        <div *ngIf="register.controls ['password'].touched" >
+            <small *ngIf="register.controls ['password'].errors" class="errors">Password should not be empty</small>
+        </div>
+      
+        <div>
+            <label class="input">Confirm Password</label><br>
+            <input type="password"  formControlName="reEnterPassword" placeholder="Confirm Password"  required>
+          </div>
+          <div *ngIf="register.controls ['reEnterPassword'].touched" >
+            <small *ngIf="register.controls ['reEnterPassword'].errors" class="errors">Password should not be empty</small>
+          </div>
+          
+      <button type="submit">Register</button>
+    </form>
+    <router-outlet></router-outlet>
+  </div>
+
+</body>
+  
